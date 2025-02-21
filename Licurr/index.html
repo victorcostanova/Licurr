@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Licurr</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/09_Licurr/logo.png" alt="logo" />
+      <h2>Effortless Live Currency Conversion</h2>
+    </header>
+    <div class="wrapper">
+      <p>Convert Bitcoin to sats or FIAT currencies.</p>
+      <div class="curropt">
+        <label for="btc" id="btc"
+          >BTC <img class="icon" src="/09_Licurr/btc.png" alt="btc"
+        /></label>
+        <input type="text" id="btc-input" placeholder="value" />
+        <button class="clear-btn">&times;</button>
+      </div>
+      <div class="curropt">
+        <label for="sat" id="sat"
+          >SAT <img class="icon" src="/09_Licurr/btc.png" alt="btc"
+        /></label>
+        <input type="text" id="sat-input" placeholder="value" />
+        <button class="clear-btn">&times;</button>
+      </div>
+      <!-- Template for FIAT selector -->
+      <div class="currency-selector">
+        <input type="text" placeholder="Select FIAT" readonly />
+        <div class="dropdown-icon">▼</div>
+        <div class="dropdown-menu">
+          <!-- Currency options will be added by JavaScript -->
+        </div>
+      </div>
+
+      <button class="addBtn">+</button>
+    </div>
+
+    <script type="module" src="/09_Licurr/script/script.js" defer></script>
+  </body>
+</html>

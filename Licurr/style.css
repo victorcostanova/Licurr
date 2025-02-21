@@ -1,0 +1,327 @@
+:root {
+  --base-color: rgb(0, 35, 19);
+  --text-color: rgb(242, 229, 195);
+  --input-color: rgb(242, 229, 195);
+  --accent-color: rgb(27, 105, 53);
+
+  /* Add responsive variables */
+  --wrapper-width: 50%;
+  --input-width: 350px;
+  --label-width: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.logo {
+  width: 200px;
+}
+
+header {
+  background-color: antiquewhite;
+  display: block;
+  text-align: center;
+  color: var(--base-color);
+  padding-bottom: 1rem;
+}
+p {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  width: var(--wrapper-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.curropt {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  position: relative;
+}
+
+.curropt label {
+  width: var(--label-width);
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.curropt input,
+.currency-selector.show input {
+  margin-left: 10px;
+  outline: none;
+  width: 100%;
+  max-width: var(--input-width);
+  height: 2.5rem;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--input-color);
+  border: 2px solid var(--input-color);
+  padding: 0.5rem 30px 0.5rem 0.5rem;
+  font-size: 1rem;
+}
+
+.clear-btn {
+  outline: none;
+  background: var(--input-color);
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  right: calc(50% - 198px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--base-color);
+  font-weight: bold;
+  line-height: 1;
+  border: 2px solid var(--input-color);
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.del-btn {
+  outline: none;
+  background: rgb(202, 25, 16);
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  right: calc(50% - 235px);
+  /*display: none;*/
+  align-items: center;
+  justify-content: center;
+  color: var(--base-color);
+  border: 2px solid rgb(202, 25, 16);
+  transform: translateY(-50%);
+  top: 50%;
+  line-height: 16px;
+}
+
+input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
+.clear-btn:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
+::placeholder {
+  color: var(--input-color);
+  padding-left: 1px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.dropdown-menu {
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--base-color);
+  border: 2px solid var(--input-color);
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.addBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.addBtn:hover {
+  box-shadow: 0 0 10px rgba(27, 105, 53, 0.5);
+}
+
+.currency-selector {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  max-width: var(--input-width);
+  margin-top: 1rem;
+  position: relative;
+}
+
+.currency-selector.show {
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  position: relative;
+  display: block;
+  opacity: 1;
+  width: 80%;
+}
+
+.dropdown-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.dropdown-item:hover {
+  background-color: var(--accent-color);
+}
+
+.dropdown-menu {
+  width: 100%;
+  margin-top: 5px;
+  background-color: var(--base-color);
+  border: 2px solid var(--input-color);
+  border-radius: 5px;
+  margin-left: 0.7rem;
+  text-align: justify;
+}
+
+.currency-selector input {
+  cursor: pointer;
+}
+
+/* Responsive breakpoints using a recursive pattern */
+@media screen and (max-width: 1200px) {
+  :root {
+    --wrapper-width: 95%;
+    --input-width: 300px;
+  }
+
+  .clear-btn {
+    right: calc(50% - 180px);
+  }
+  .del-btn {
+    right: calc(50% - 213px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --input-width: 250px;
+  }
+
+  .clear-btn {
+    right: calc(50% - 153px);
+  }
+  .del-btn {
+    right: calc(50% - 185px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --wrapper-width: 100%;
+    --input-width: 200px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .curropt {
+    padding: 0.3rem;
+    margin: 0.3rem;
+  }
+
+  .curropt label,
+  .curropt input {
+    font-size: 1rem;
+  }
+
+  .clear-btn {
+    right: calc(50% - 127px);
+  }
+  .del-btn {
+    right: calc(50% - 160px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    --label-width: 50px;
+    --input-width: 150px;
+  }
+
+  .wrapper {
+    padding: 0.5rem;
+    font-size: 10px;
+  }
+
+  .curropt input {
+    margin-left: 0;
+    padding-right: 30px;
+  }
+
+  .curropt label,
+  .curropt input {
+    font-size: 0.6rem;
+  }
+
+  .clear-btn {
+    right: calc(50% - 95px);
+  }
+  .del-btn {
+    right: calc(50% - 126px);
+  }
+}
