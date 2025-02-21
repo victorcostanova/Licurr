@@ -8,7 +8,7 @@ The project is hosted using GitHub Pages, making it easily accessible for anyone
 
 You can access Licurr by visiting the following link:
 
-[**Licurr**](https://YOUR_GITHUB_USERNAME.github.io/Live-Currency-Conversion/)
+[**Licurr**](https://victorcostanova.github.io/Licurr/)
 
 Once the page is loaded, you can enter values in any currency field, and the app will automatically convert them to all supported currencies, including Bitcoin (BTC) and Satoshis.
 
