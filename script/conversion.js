@@ -92,14 +92,14 @@ function updateCurrencyValues(baseInput, baseCurrency) {
       currencyCode
     );
 
-    // Exibir botão clear sempre que o input tiver valor
+    // Clear button display
     const clearBtn = input.nextElementSibling;
     if (clearBtn && clearBtn.classList.contains("clear-btn")) {
       clearBtn.style.display = input.value ? "inline-block" : "none";
     }
   });
 
-  // Exibir botão clear para o input base também
+  
   const baseClearBtn = baseInput.nextElementSibling;
   if (baseClearBtn && baseClearBtn.classList.contains("clear-btn")) {
     baseClearBtn.style.display = baseInput.value ? "inline-block" : "none";
