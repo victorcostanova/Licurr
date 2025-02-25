@@ -12,7 +12,7 @@ You can access Licurr by visiting the following link:
 
 [**Licurr**](https://victorcostanova.github.io/Licurr/)
 
-Once the page is loaded, you can enter values in any currency field, and the app will automatically convert them to all supported currencies, including Bitcoin (BTC) and Satoshis.
+
 ---
 [**Video Demonstration**](https://youtu.be/qDj4zg3XUiI)
 
