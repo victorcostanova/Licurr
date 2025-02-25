@@ -62,11 +62,11 @@ When selecting APIs, reliability and update frequency were the primary considera
 
 ## 🛠️ Implementation Challenges & Solutions
 
-Challenge 1: Dynamically Adding All Available Currencies
+### Challenge 1: Dynamically Adding All Available Currencies
 One of the major challenges was implementing a system to dynamically populate and manage the extensive list of global currencies. I created a solution that utilizes the currency codes and symbols from the currencies.js file, using JavaScript functions to populate dropdown options. This approach allows users to easily select from all available currencies without requiring hardcoded options in the HTML. Additionally, it makes future currency additions simple by just updating the currencies.js data file.
 
-### Challenge 2: Satoshi Precision
-Displaying Satoshi values (0.00000001 BTC) accurately required careful handling of JavaScript's floating-point limitations. I implemented custom precision handling to ensure values display correctly at all decimal levels, particularly when working with the smallest Bitcoin unit where precision is critical for accurate conversions.
+### Challenge 2: Responsive Design Across All Devices
+Creating a truly responsive experience across all device sizes proved challenging. The interface needed to completely transform its layout between mobile, tablet, and desktop views.
 
 ### Challenge 3: Number Formatting with Commas
 Implementing proper number formatting with comma separators for thousands proved challenging across different currencies with varying formatting conventions. I developed a custom formatting function that intelligently applies the appropriate thousand separators (commas) based on the currency standard, enhancing readability for large numbers while respecting locale-specific formatting rules.
